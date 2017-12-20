@@ -10,7 +10,7 @@ var bot = linebot({
   channelAccessToken: 'd51aMapLxFqCfYHahC30D8UOFhsQewF/dfFUHrColnMyJjAycDWbkGLNI4P7OZ1HT0GDaBh1Hsk/Zi4kXyty57Y45JzbdEL+IrAXjmfqLs6i77L7lDbRlCQW3aIF8x53yYZknb+xlrd1sBbRf3RGGwdB04t89/1O/w1cDnyilFU='  
 });
 
-/*
+
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
@@ -23,9 +23,22 @@ bot.on('message', function(event) {
     });
   }
 });
-*/
+
 bot.on('message', function(event) {
     console.log(event); //把收到訊息的 event 印出來看看
+});
+
+bot.on('message', function(event) {
+  if (event.message.type = 'text') {
+    var msg = event.message.text;
+    event.reply(msg).then(function(data) {
+      // success 
+      console.log(msg);
+    }).catch(function(error) {
+      // error 
+      console.log('error');
+    });
+  }
 });
   
   const app = express();
