@@ -32,10 +32,9 @@ bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
     var sendMsg = '李維好帥';
-    event.reply(msg).then(function(data) {
+    event.reply(msg+sendMsg).then(function(data) {
       // success 
       console.log(msg);
-      console.log(sendMsg);
     }).catch(function(error) {
       // error 
       console.log('error');
@@ -45,7 +44,7 @@ bot.on('message', function(event) {
 
 setTimeout(function(){
   var userId = 'U00cfed38baad82fbc08344097ff65ad9';
-  var sendMsg = '李維好帥';
+  var sendMsg = '李維真可愛';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
 },5000);
