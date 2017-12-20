@@ -31,22 +31,24 @@ bot.on('message', function(event) {
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
+    var sendMsg = '李維好帥';
     event.reply(msg).then(function(data) {
       // success 
-      console.log(msg);
+      console.log(msg+sendMsg+'李維好帥');
     }).catch(function(error) {
       // error 
       console.log('error');
     });
   }
 });
+/*
 setTimeout(function(){
   var userId = 'U00cfed38baad82fbc08344097ff65ad9';
   var sendMsg = '李維好帥';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
 },5000);
-
+*/
 
   
   const app = express();
