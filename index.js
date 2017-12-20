@@ -40,6 +40,14 @@ bot.on('message', function(event) {
     });
   }
 });
+setTimeout(function(){
+  var userId = 'U00cfed38baad82fbc08344097ff65ad9';
+  var sendMsg = '李維好帥';
+  bot.push(userId,sendMsg);
+  console.log('send: '+sendMsg);
+},5000);
+
+
   
   const app = express();
   const linebotParser = bot.parser();
