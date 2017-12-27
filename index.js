@@ -70,7 +70,7 @@ bot.on('message', function(event) {
 
 setTimeout(function(){
   var userId = ('U00cfed38baad82fbc08344097ff65ad9','U0924b640a03c435e9b9f52d7d6aecb3e');
-  var sendMsg = '你好';
+  var sendMsg = '李維你到幾點?????';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
 },5000);
