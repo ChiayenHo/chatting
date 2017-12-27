@@ -12,26 +12,13 @@ var bot = linebot({
 
 
 bot.on('message', function(event) {
-  if (event.message.type = 'text') {
-    var msg = event.message.text;
-    event.reply(msg).then(function(data) {
-      // success 
-      console.log(msg);
-    }).catch(function(error) {
-      // error 
-      console.log('error');
-    });
-  }
-});
-
-bot.on('message', function(event) {
     console.log(event); //把收到訊息的 event 印出來看看
 });
 
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
-    var sendMsg = '李維好帥';
+    var sendMsg = '好帥';
     event.reply(msg+sendMsg).then(function(data) {
       // success 
       console.log(msg);
@@ -40,11 +27,47 @@ bot.on('message', function(event) {
       console.log('error');
     });
   }
+
+  if (event.message.type = 'sticker'){
+    var stk = new StickerMessage("1", "2");
+    event.reply(stk).then(function(data){
+      console.log('sticker succcess');
+    }).catch(function(error){
+      console.log('sticker error')
+    })
+  }
+
+  event.reply({
+    type: 'template',
+    altText: 'this is a buttons template',
+    template: {
+      type: 'buttons',
+      thumbnailImageUrl: 'https://example.com/bot/images/image.jpg',
+      title: 'Menu',
+      text: 'Please select',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=123'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=123'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/123'
+      }]
+    }
+  });
+
 });
+
+
 
 setTimeout(function(){
   var userId = 'U00cfed38baad82fbc08344097ff65ad9';
-  var sendMsg = '李維真可愛';
+  var sendMsg = '你好';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
 },5000);
