@@ -28,8 +28,12 @@ bot.on('message', function(event) {
     });
   }
 
-  if (event.message.type = 'sticker'){
-    var stk = new StickerMessage("1", "2");
+  else if (event.message.type = 'sticker'){
+    var stk = {
+      type: 'sticker',
+      packageId: '1',
+      stickerId: '2'
+    }
     event.reply(stk).then(function(data){
       console.log('sticker succcess');
     }).catch(function(error){
@@ -37,7 +41,7 @@ bot.on('message', function(event) {
     })
   }
 
-  if(event = '選單'){
+  else if(event.message.type = 'image'){
     event.reply({
       type: 'template',
       altText: 'this is a buttons template',
@@ -60,7 +64,6 @@ bot.on('message', function(event) {
           uri: 'http://example.com/page/123'
         }]}})
   }
-
 });
 
 
