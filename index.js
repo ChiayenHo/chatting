@@ -37,36 +37,36 @@ bot.on('message', function(event) {
     })
   }
 
-  event.reply({
-    type: 'template',
-    altText: 'this is a buttons template',
-    template: {
-      type: 'buttons',
-      thumbnailImageUrl: 'https://example.com/bot/images/image.jpg',
-      title: 'Menu',
-      text: 'Please select',
-      actions: [{
-        type: 'postback',
-        label: 'Buy',
-        data: 'action=buy&itemid=123'
-      }, {
-        type: 'postback',
-        label: 'Add to cart',
-        data: 'action=add&itemid=123'
-      }, {
-        type: 'uri',
-        label: 'View detail',
-        uri: 'http://example.com/page/123'
-      }]
-    }
-  });
+  if(event = '選單'){
+    event.reply({
+      type: 'template',
+      altText: 'this is a buttons template',
+      template: {
+        type: 'buttons',
+        thumbnailImageUrl: 'https://example.com/bot/images/image.jpg',
+        title: 'Menu',
+        text: 'Please select',
+        actions: [{
+          type: 'postback',
+          label: 'Buy',
+          data: 'action=buy&itemid=123'
+        }, {
+          type: 'postback',
+          label: 'Add to cart',
+          data: 'action=add&itemid=123'
+        }, {
+          type: 'uri',
+          label: 'View detail',
+          uri: 'http://example.com/page/123'
+        }]}})
+  }
 
 });
 
 
 
 setTimeout(function(){
-  var userId = 'U00cfed38baad82fbc08344097ff65ad9';
+  var userId = ('U00cfed38baad82fbc08344097ff65ad9','U0924b640a03c435e9b9f52d7d6aecb3e');
   var sendMsg = '你好';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
