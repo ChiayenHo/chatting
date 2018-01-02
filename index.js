@@ -34,7 +34,7 @@ bot.on('message', function(event) {
       packageId: '1',
       stickerId: '2'
     }
-    var sendMsg = '您真幽默';
+    var sendMsg = '您真幽默XDD';
     event.reply(stk+sendMsg).then(function(data){
       console.log('sticker succcess');
     }).catch(function(error){
