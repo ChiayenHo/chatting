@@ -18,7 +18,7 @@ bot.on('message', function(event) {
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
-    var sendMsg = '好帥';
+    var sendMsg = '哈哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
       // success 
       console.log(msg);
@@ -34,7 +34,8 @@ bot.on('message', function(event) {
       packageId: '1',
       stickerId: '2'
     }
-    event.reply(stk).then(function(data){
+    var sendMsg = '您真幽默';
+    event.reply(stk+sendMsg).then(function(data){
       console.log('sticker succcess');
     }).catch(function(error){
       console.log('sticker error')
@@ -70,7 +71,7 @@ bot.on('message', function(event) {
 
 setTimeout(function(){
   var userId = ('U00cfed38baad82fbc08344097ff65ad9','U0924b640a03c435e9b9f52d7d6aecb3e');
-  var sendMsg = '你好';
+  var sendMsg = '哈哈哈哈哈';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
 },5000);
