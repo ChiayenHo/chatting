@@ -32,11 +32,6 @@ bot.on('message', function(event) {
   }
 
   else if (inputtype = text){
-    /*var stk = {
-      type: 'sticker',
-      packageId: '1',
-      stickerId: '2'
-    }*/
     var sendMsg = '您真幽默XDD';
     event.reply(sendMsg).then(function(data){
       console.log('sticker succcess');
