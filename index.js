@@ -31,7 +31,7 @@ bot.on('message', function(event) {
         actions: [{
           type: 'message',
           label: '好康報告',
-          data: '來看看下禮拜有甚麼好康'
+          text: '來看看下禮拜有甚麼好康'
         }, {
           type: 'postback',
           label: '即時訊息',
@@ -77,7 +77,7 @@ bot.on('message', function(event) {
 
 setTimeout(function(){
   var userId = ('U00cfed38baad82fbc08344097ff65ad9','U0924b640a03c435e9b9f52d7d6aecb3e');
-  var sendMsg = '哈哈哈哈哈';
+  var sendMsg = '真可愛';
   bot.push(userId,sendMsg);
   console.log('send: '+sendMsg);
 },5000);
