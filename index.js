@@ -31,7 +31,7 @@ bot.on('message', function(event) {
         actions: [{
           type: 'message',
           label: '好康報告',
-          text: '來看看下禮拜有甚麼好康'
+          text: '來看看有甚麼好康'
         }, {
           type: 'postback',
           label: '即時訊息',
