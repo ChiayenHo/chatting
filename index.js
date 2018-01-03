@@ -31,7 +31,7 @@ bot.on('message', function(event) {
     });
   }
 
-  else if (inputtype == text){
+  else if (inputtype == 'text'){
     var sendMsg = '您真幽默XDD';
     event.reply(sendMsg).then(function(data){
       console.log('sticker succcess');
