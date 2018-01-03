@@ -26,15 +26,15 @@ bot.on('message', function(event) {
       template: {
         type: 'buttons',
         thumbnailImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Zippys_Zip_Pac.jpg/270px-Zippys_Zip_Pac.jpg',
-        title: 'QQ么好康報你知',
+        title: 'QQ夭好康報你知',
         text: '點選以下服務',
         actions: [{
-          type: 'postback',
-          label: '即時訊息',
-          data: 'action=buy&itemid=123'
+          type: 'message',
+          label: '好康報告',
+          data: '來看看下禮拜有甚麼好康'
         }, {
           type: 'postback',
-          label: '好康報告',
+          label: '即時訊息',
           data: 'action=add&itemid=123'
         }, {
           type: 'uri',
@@ -42,6 +42,11 @@ bot.on('message', function(event) {
           uri: 'http://example.com/page/123'
         }]}})
   }
+  else if(event.message.text == '來看看下禮拜有甚麼好康'){
+    var msg = '時間：禮拜一12:10 地點：管理學院一館101 活動：微軟coding angels 好康：餐盒'
+    event.reply(msg)
+    }
+
   else if (inputtype == 'text') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈';
@@ -66,7 +71,6 @@ bot.on('message', function(event) {
       console.log('sticker error')
     })
   }
-
 
 });
 
