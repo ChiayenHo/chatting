@@ -15,11 +15,13 @@ bot.on('message', function(event) {
     console.log(event); //把收到訊息的 event 印出來看看
 });
 
-
+bot.on('message', function(event) {
+  inputtype = event.message.type
+  console.log(inputtype)
+}
 
 bot.on('message', function(event) {
-  console.log(event.message.type)
-  if (event.message.type = 'text') {
+  if (inputtype = 'text') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
@@ -31,14 +33,14 @@ bot.on('message', function(event) {
     });
   }
 
-  else if (event.message.type = 'sticker'){
-    var stk = {
+  else if (inputtype = 'sticker'){
+    /*var stk = {
       type: 'sticker',
       packageId: '1',
       stickerId: '2'
-    }
+    }*/
     var sendMsg = '您真幽默XDD';
-    event.reply(stk+sendMsg).then(function(data){
+    event.reply(sendMsg).then(function(data){
       console.log('sticker succcess');
     }).catch(function(error){
       console.log('sticker error')
