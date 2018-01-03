@@ -31,7 +31,7 @@ bot.on('message', function(event) {
     });
   }
 
-  else if (inputtype = 'text'){
+  else if (inputtype = text){
     /*var stk = {
       type: 'sticker',
       packageId: '1',
