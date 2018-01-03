@@ -31,7 +31,7 @@ bot.on('message', function(event) {
         actions: [{
           type: 'message',
           label: '好康報告',
-          text: '來看看下禮拜有甚麼好康'
+          text: '來看看有甚麼好康'
         }, {
           type: 'postback',
           label: '即時訊息',
@@ -42,9 +42,65 @@ bot.on('message', function(event) {
           uri: 'http://example.com/page/123'
         }]}})
   }
-  else if(event.message.text == '來看看下禮拜有甚麼好康'){
-    var msg = '時間：禮拜一12:10 地點：管理學院一館101 \n 活動：微軟coding angels \n 好康：餐盒 \n 數量：100'
+  else if(event.message.text == '來看看有甚麼好康'){
+    var msg = '時間:禮拜一12:10\n地點:管理學院一館101\n活動:微軟coding angels\n好康:餐盒\n數量:100'
     event.reply(msg)
+    }
+  
+  else if(event.message.text == '每天'){
+    event.reply({
+        type: "template",
+        altText: "this is a carousel template",
+        template: {
+            type: "carousel",
+            columns: [
+                {
+                  "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+                  "imageBackgroundColor": "#FFFFFF",
+                  "title": "明天",
+                  "text": "description",
+                  "actions": [
+                      {
+                          "type": "postback",
+                          "label": "Buy",
+                          "data": "action=buy&itemid=111"
+                      }, {
+                          "type": "postback",
+                          "label": "Add to cart",
+                          "data": "action=add&itemid=111"
+                      },{
+                          "type": "uri",
+                          "label": "View detail",
+                          "uri": "http://example.com/page/111"
+                      }]
+                },
+                {
+                  "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
+                  "imageBackgroundColor": "#000000",
+                  "title": "後天",
+                  "text": "description",
+                  "actions": [
+                      {
+                          "type": "postback",
+                          "label": "Buy",
+                          "data": "action=buy&itemid=222"
+                      },{
+                          "type": "postback",
+                          "label": "Add to cart",
+                          "data": "action=add&itemid=222"
+                      },{
+                          "type": "uri",
+                          "label": "View detail",
+                          "uri": "http://example.com/page/222"
+                      }]
+                }
+            ],
+            "imageAspectRatio": "rectangle",
+            "imageSize": "cover"
+        }
+      }
+
+        })
     }
 
   else if (inputtype == 'text') {
