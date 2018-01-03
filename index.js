@@ -15,11 +15,10 @@ bot.on('message', function(event) {
     console.log(event); //把收到訊息的 event 印出來看看
 });
 
-
 bot.on('message', function(event) {
   inputtype = event.message.type
   console.log(inputtype)
-  if (inputtype = 'text') {
+  if (inputtype == 'text') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
@@ -31,40 +30,39 @@ bot.on('message', function(event) {
     });
   }
 
-  else if (inputtype = 'sticker'){
-    /*var stk = {
+  else if (inputtype == 'sticker'){
+    var stk = {
       type: 'sticker',
       packageId: '1',
       stickerId: '2'
-    }*/
-    var sendMsg = '您真幽默XDD';
-    event.reply(sendMsg).then(function(data){
+    }
+    event.reply(stk).then(function(data){
       console.log('sticker succcess');
     }).catch(function(error){
       console.log('sticker error')
     })
   }
 
-  else if(event.message.type = 'image'){
+  else if(event.message.type == 'image'){
     event.reply({
       type: 'template',
       altText: 'this is a buttons template',
       template: {
         type: 'buttons',
-        thumbnailImageUrl: 'https://example.com/bot/images/image.jpg',
-        title: 'Menu',
-        text: 'Please select',
+        thumbnailImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Zippys_Zip_Pac.jpg/270px-Zippys_Zip_Pac.jpg',
+        title: 'QQ么好康報你知',
+        text: '點選以下服務',
         actions: [{
           type: 'postback',
-          label: 'Buy',
+          label: '即時訊息',
           data: 'action=buy&itemid=123'
         }, {
           type: 'postback',
-          label: 'Add to cart',
+          label: '好康報告',
           data: 'action=add&itemid=123'
         }, {
           type: 'uri',
-          label: 'View detail',
+          label: '進網頁',
           uri: 'http://example.com/page/123'
         }]}})
   }
