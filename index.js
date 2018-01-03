@@ -15,7 +15,10 @@ bot.on('message', function(event) {
     console.log(event); //把收到訊息的 event 印出來看看
 });
 
+
+
 bot.on('message', function(event) {
+  console.log(event.message.type)
   if (event.message.type = 'text') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈哈';
