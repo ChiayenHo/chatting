@@ -43,7 +43,7 @@ bot.on('message', function(event) {
         }]}})
   }
   else if(event.message.text == '來看看下禮拜有甚麼好康'){
-    var msg = '時間：禮拜一12:10 地點：管理學院一館101 活動：微軟coding angels 好康：餐盒'
+    var msg = '時間：禮拜一12:10 地點：管理學院一館101 \n 活動：微軟coding angels \n 好康：餐盒 \n 數量：100'
     event.reply(msg)
     }
 
