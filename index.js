@@ -19,7 +19,7 @@ bot.on('message', function(event) {
 bot.on('message', function(event) {
   inputtype = event.message.type
   console.log(inputtype)
-  if (inputtype = 'text') {
+  if (inputtype = 'sticker') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
@@ -31,7 +31,7 @@ bot.on('message', function(event) {
     });
   }
 
-  else if (inputtype = 'sticker'){
+  else if (inputtype = 'text'){
     /*var stk = {
       type: 'sticker',
       packageId: '1',
