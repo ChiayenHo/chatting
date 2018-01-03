@@ -21,7 +21,7 @@ bot.on('message', function(event) {
   console.log(event.message.type)
   if (event.message.type = 'text') {
     var msg = event.message.text;
-    var sendMsg = '哈哈哈哈';
+    var sendMsg = '哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
       // success 
       console.log(msg);
@@ -69,7 +69,6 @@ bot.on('message', function(event) {
         }]}})
   }
 });
-
 
 
 setTimeout(function(){
