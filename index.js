@@ -19,7 +19,7 @@ bot.on('message', function(event) {
 bot.on('message', function(event) {
   inputtype = event.message.type
   console.log(inputtype)
-  if (inputtype = 'sticker') {
+  if (inputtype == 'sticker') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
@@ -31,7 +31,7 @@ bot.on('message', function(event) {
     });
   }
 
-  else if (inputtype = text){
+  else if (inputtype == text){
     var sendMsg = '您真幽默XDD';
     event.reply(sendMsg).then(function(data){
       console.log('sticker succcess');
@@ -40,7 +40,7 @@ bot.on('message', function(event) {
     })
   }
 
-  else if(event.message.type = 'image'){
+  else if(event.message.type == 'image'){
     event.reply({
       type: 'template',
       altText: 'this is a buttons template',
