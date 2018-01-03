@@ -18,7 +18,31 @@ bot.on('message', function(event) {
 bot.on('message', function(event) {
   inputtype = event.message.type
   console.log(inputtype)
-  if (inputtype == 'text') {
+
+  if(event.message.text == '餓了'){
+    event.reply({
+      type: 'template',
+      altText: 'this is a buttons template',
+      template: {
+        type: 'buttons',
+        thumbnailImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Zippys_Zip_Pac.jpg/270px-Zippys_Zip_Pac.jpg',
+        title: 'QQ么好康報你知',
+        text: '點選以下服務',
+        actions: [{
+          type: 'postback',
+          label: '即時訊息',
+          data: 'action=buy&itemid=123'
+        }, {
+          type: 'postback',
+          label: '好康報告',
+          data: 'action=add&itemid=123'
+        }, {
+          type: 'uri',
+          label: '進網頁',
+          uri: 'http://example.com/page/123'
+        }]}})
+  }
+  else if (inputtype == 'text') {
     var msg = event.message.text;
     var sendMsg = '哈哈哈';
     event.reply(msg+sendMsg).then(function(data) {
@@ -43,29 +67,7 @@ bot.on('message', function(event) {
     })
   }
 
-  else if(event.message.type == 'image'){
-    event.reply({
-      type: 'template',
-      altText: 'this is a buttons template',
-      template: {
-        type: 'buttons',
-        thumbnailImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Zippys_Zip_Pac.jpg/270px-Zippys_Zip_Pac.jpg',
-        title: 'QQ么好康報你知',
-        text: '點選以下服務',
-        actions: [{
-          type: 'postback',
-          label: '即時訊息',
-          data: 'action=buy&itemid=123'
-        }, {
-          type: 'postback',
-          label: '好康報告',
-          data: 'action=add&itemid=123'
-        }, {
-          type: 'uri',
-          label: '進網頁',
-          uri: 'http://example.com/page/123'
-        }]}})
-  }
+
 });
 
 
