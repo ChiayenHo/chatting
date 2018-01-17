@@ -39,7 +39,7 @@ bot.on('message', function(event) {
         }, {
           type: 'uri',
           label: '進網頁',
-          uri: 'http://example.com/page/123'
+          uri: 'https://csxfinal.herokuapp.com/#tab-1'
         }]}})
   }
   else if(event.message.text == '來看看有甚麼好康'){
