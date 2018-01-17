@@ -33,9 +33,9 @@ bot.on('message', function(event) {
           label: '好康報告',
           text: '來看看有甚麼好康'
         }, {
-          type: 'postback',
+          type: 'uri',
           label: '即時訊息',
-          data: 'action=add&itemid=123'
+          uri: 'https://csxfinal.herokuapp.com/query/query2'
         }, {
           type: 'uri',
           label: '進網頁',
