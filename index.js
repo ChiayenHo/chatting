@@ -43,7 +43,7 @@ bot.on('message', function(event) {
         }]}})
   }
   else if(event.message.text == '來看看有甚麼好康'){
-    var msg = '時間:2018-01-18 12:00:00 ~ 14:00:00\n地點:第二行政大樓第4會議室\n活動:國立臺灣大學106學年度評鑑工作人員研習活動 106學年度評鑑工作人員研習活動-第1場\n數量:2人\n 詳情：https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20171200_03'
+    var msg = '時間:2018-01-18 12:00:00 ~ 14:00:00\n地點:第二行政大樓第4會議室\n活動:國立臺灣大學106學年度評鑑工作人員研習活動 106學年度評鑑工作人員研習活動-第1場\n數量:2人\n詳情:https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20171200_03'
     event.reply(msg)
     }
   
